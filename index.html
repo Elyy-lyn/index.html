@@ -1,0 +1,417 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Joceline Gunawan | Portfolio</title>
+<!-- Google Fonts: Playfair Display & Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'soft-pink': '#F7D6E0',
+            'dusty-rose': '#E7B7C8',
+            'rose-gold': '#D8A7B1',
+            'ivory': '#FFF9FB',
+            'dark-gray': '#444444',
+          },
+          fontFamily: {
+            'playfair': ['"Playfair Display"', 'serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '2rem',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #FFF9FB 0%, #F7D6E0 100%);
+    }
+
+    .timeline-dot::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: #E7B7C8;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+    }
+    .timeline-item:last-child .timeline-dot::after { display: none; }
+  </style>
+</head>
+<body class="bg-ivory font-poppins text-dark-gray overflow-x-hidden">
+<!-- BEGIN: Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-soft-pink/30">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="font-playfair italic text-2xl font-bold text-rose-gold">Joceline</span>
+<div class="w-2 h-2 bg-rose-gold rounded-full"></div>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium">
+<a class="hover:text-rose-gold transition-colors" href="#home">Home</a>
+<a class="hover:text-rose-gold transition-colors" href="#about">About</a>
+<a class="hover:text-rose-gold transition-colors" href="#skills">Skills</a>
+<a class="hover:text-rose-gold transition-colors" href="#journey">Journey</a>
+<a class="hover:text-rose-gold transition-colors" href="#showcase">Showcase</a>
+<a class="hover:text-rose-gold transition-colors" href="#contact">Contact</a>
+<a class="bg-rose-gold text-white px-6 py-2 rounded-full hover:bg-dusty-rose transition-all shadow-md" href="#contact">Let's Connect</a>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[90vh] flex items-center pt-20 pb-12 overflow-hidden gradient-bg" id="home">
+<!-- Abstract background decorations -->
+<div class="absolute top-20 right-[-10%] w-96 h-96 bg-soft-pink/40 rounded-full blur-3xl opacity-50"></div>
+<div class="absolute bottom-10 left-[-5%] w-64 h-64 bg-rose-gold/20 rounded-full blur-2xl opacity-40"></div>
+<div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1" data-purpose="hero-content">
+<h1 class="font-playfair text-5xl md:text-7xl leading-tight text-dark-gray">
+          Joceline<br>
+<span class="text-rose-gold italic">Gunawan</span>
+</h1>
+<div class="flex items-center gap-4 my-6">
+<div class="h-[1px] w-12 bg-rose-gold"></div>
+<p class="text-rose-gold font-medium tracking-wide">Siswi Kelas XI SMA Stella Duce 1</p>
+<div class="h-[1px] w-12 bg-rose-gold"></div>
+</div>
+<p class="text-gray-600 mb-8 max-w-lg leading-relaxed">
+          Saya adalah siswi SMA Stella Duce 1 yang sedang mempelajari dasar-dasar Web Development menggunakan HTML dan CSS. Saya senang belajar hal baru dan terus mengembangkan kemampuan saya di bidang teknologi.
+        </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-rose-gold text-white px-8 py-3 rounded-full flex items-center gap-2 hover:bg-dusty-rose transition-all shadow-lg" href="#showcase">
+            Lihat Portfolio <span class="">→</span>
+</a>
+<a class="border border-rose-gold text-rose-gold px-8 py-3 rounded-full flex items-center gap-2 hover:bg-rose-gold hover:text-white transition-all" href="#contact">
+            Hubungi Saya <span class="">💬</span>
+</a>
+</div>
+</div>
+<div class="order-1 md:order-2 relative" data-purpose="hero-image">
+<div class="relative z-10 w-full max-w-md mx-auto aspect-[2/3] rounded-full border-8 border-white shadow-2xl overflow-hidden">
+<img alt="Joceline Gunawan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApoQwn4KydW9Fr5L7huFNyxev4e_LcSHRsVfFuAc1oa2tvboqEqY4rzAWFslLzgEVm1GXfqMxYc374XeBRWz3N6sjUuJNRmpM6rR6Ik7WpiB92F21oqioasaqmVDWxvAVOB264HamNeUJrW_6JJywlEIy5rRcz4fMU_376lDIzol2vcz-Maa7MWe9UIIxHha1NZym4tKSNirN_wj8N3hEhuER5YKXtZciK_YXIjQeCjnQ6MdcvtKIw0PIH9mIvXAeTU7OAtkrOSB3u">
+</div>
+<!-- Decorative Badge -->
+<div class="absolute -bottom-6 -right-6 z-20 w-32 h-32 bg-white rounded-full p-4 shadow-xl border border-soft-pink flex items-center justify-center text-center animate-float">
+<div class="text-[10px] font-bold text-rose-gold uppercase tracking-tighter">
+            Keep Learning<br>Keep Growing<br>❤
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutAndSkillsSection -->
+<section class="py-24 bg-white" id="about">
+<div class="container mx-auto px-6">
+<div class="grid lg:grid-cols-3 gap-12">
+<!-- About Me Column -->
+<div class="lg:col-span-1" data-purpose="about-me">
+<div class="flex items-center gap-3 mb-8">
+<span class="text-3xl">🌸</span>
+<h2 class="font-playfair text-3xl font-bold text-dark-gray">Tentang Saya</h2>
+</div>
+<div class="glass-card p-8 rounded-custom shadow-sm border border-soft-pink/50">
+<div class="space-y-4">
+<div class="grid grid-cols-[100px_1fr] gap-2 items-start text-sm">
+<span class="font-semibold text-rose-gold">Nama</span>
+<span class="">: Joceline Gunawan</span>
+</div>
+<div class="grid grid-cols-[100px_1fr] gap-2 items-start text-sm">
+<span class="font-semibold text-rose-gold">Sekolah</span>
+<span class="">: SMA Stella Duce 1</span>
+</div>
+<div class="grid grid-cols-[100px_1fr] gap-2 items-start text-sm">
+<span class="font-semibold text-rose-gold">Kelas</span>
+<span class="">: XI</span>
+</div>
+<div class="grid grid-cols-[100px_1fr] gap-2 items-start text-sm">
+<span class="font-semibold text-rose-gold">Minat</span>
+<span class="">: Web Development</span>
+</div>
+<div class="grid grid-cols-[100px_1fr] gap-2 items-start text-sm">
+<span class="font-semibold text-rose-gold">Hobi</span>
+<span class="">: Membaca, mendengarkan musik, dan belajar desain.</span>
+</div>
+<div class="grid grid-cols-[100px_1fr] gap-2 items-start text-sm">
+<span class="font-semibold text-rose-gold">Tujuan</span>
+<span class="">: Mengembangkan kemampuan HTML dan CSS sebagai dasar menjadi web developer.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Skills Column -->
+<div class="lg:col-span-1" data-purpose="skills" id="skills">
+<div class="flex items-center gap-3 mb-8">
+<span class="text-3xl">🪄</span>
+<h2 class="font-playfair text-3xl font-bold text-dark-gray">Kemampuan</h2>
+</div>
+<div class="space-y-6">
+<div data-purpose="skill-item">
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="">HTML</span>
+<span class="text-rose-gold">85%</span>
+</div>
+<div class="w-full bg-soft-pink/30 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-gold h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div data-purpose="skill-item">
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="">CSS</span>
+<span class="text-rose-gold">70%</span>
+</div>
+<div class="w-full bg-soft-pink/30 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-gold h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div data-purpose="skill-item">
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="">Canva</span>
+<span class="text-rose-gold">80%</span>
+</div>
+<div class="w-full bg-soft-pink/30 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-gold h-full rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div data-purpose="skill-item">
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="">Microsoft Office</span>
+<span class="text-rose-gold">85%</span>
+</div>
+<div class="w-full bg-soft-pink/30 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-gold h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div data-purpose="skill-item">
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="">Communication</span>
+<span class="text-rose-gold">80%</span>
+</div>
+<div class="w-full bg-soft-pink/30 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-gold h-full rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div data-purpose="skill-item">
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="">Teamwork</span>
+<span class="text-rose-gold">80%</span>
+</div>
+<div class="w-full bg-soft-pink/30 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-gold h-full rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Learning Journey Column -->
+<div class="lg:col-span-1" data-purpose="learning-journey" id="journey">
+<div class="flex items-center gap-3 mb-8">
+<span class="text-3xl">🧭</span>
+<h2 class="font-playfair text-3xl font-bold text-dark-gray">Perjalanan Belajar</h2>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4 timeline-item relative">
+<div class="w-4 h-4 bg-rose-gold rounded-full shrink-0 z-10 timeline-dot"></div>
+<div>
+<h4 class="font-bold text-rose-gold">Belajar Struktur HTML</h4>
+<p class="text-xs text-gray-500">Mempelajari dasar-dasar HTML seperti tag, atribut, dan struktur halaman.</p>
+</div>
+</div>
+<div class="flex gap-4 timeline-item relative">
+<div class="w-4 h-4 bg-rose-gold rounded-full shrink-0 z-10 timeline-dot"></div>
+<div>
+<h4 class="font-bold text-rose-gold">Mengenal CSS</h4>
+<p class="text-xs text-gray-500">Belajar styling, warna, font, dan layout sederhana.</p>
+</div>
+</div>
+<div class="flex gap-4 timeline-item relative">
+<div class="w-4 h-4 bg-rose-gold rounded-full shrink-0 z-10 timeline-dot"></div>
+<div>
+<h4 class="font-bold text-rose-gold">Membuat Landing Page</h4>
+<p class="text-xs text-gray-500">Membuat halaman web pertama menggunakan HTML &amp; CSS.</p>
+</div>
+</div>
+<div class="flex gap-4 timeline-item relative">
+<div class="w-4 h-4 bg-rose-gold rounded-full shrink-0 z-10 timeline-dot"></div>
+<div>
+<h4 class="font-bold text-rose-gold">Responsive Design</h4>
+<p class="text-xs text-gray-500">Belajar membuat tampilan web yang responsive untuk berbagai device.</p>
+</div>
+</div>
+<div class="flex gap-4 timeline-item relative">
+<div class="w-4 h-4 bg-rose-gold rounded-full shrink-0 z-10 timeline-dot"></div>
+<div>
+<h4 class="font-bold text-rose-gold">Belajar JavaScript</h4>
+<p class="text-xs text-gray-500">(Coming Soon)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutAndSkillsSection -->
+<!-- BEGIN: ShowcaseSection -->
+<section class="py-24 bg-soft-pink/10" id="showcase">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-playfair text-4xl font-bold text-dark-gray mb-4">Hasil Pembelajaran Saya</h2>
+<p class="text-gray-500">Berikut beberapa hasil latihan HTML &amp; CSS yang telah saya pelajari.</p>
+</div>
+<div class="relative group">
+<!-- Navigation Buttons -->
+<button class="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-rose-gold text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">←</button>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-rose-gold text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">→</button>
+<!-- Project Cards Container -->
+<div class="flex gap-6 overflow-x-auto pb-12 px-4 snap-x no-scrollbar">
+<!-- Project 1 -->
+<div class="min-w-[300px] bg-white rounded-2xl shadow-sm p-4 snap-start border border-soft-pink/30">
+<img alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaT8Cp5WIYtJCK52QJTxPhlbtsGUwCBlQE67C31PpdzMXP7Ifo4DoZSQ6CsGQL9DWPl81VJVPWQFU51AmFUg1CrKIENELGbTKgMfHUnregtJIzU1jhREWXki_8UIqxeeVyX7b-Y9YTDtgoeNsZn9f8719Xj2H9YKvcHf2fB5d5fBfPYENJ739BoWL9IUsZBv7SXffXgQz9paWhg5Sir8YifWXJd5UKmBgHZQMZJel66KRea9Z1dfwnc_-uHITA6lwVwTlDK258N57l">
+<span class="text-xs text-rose-gold font-semibold">Project 1</span>
+<h3 class="font-bold text-lg mb-4">Simple Biodata Website</h3>
+<button class="w-full bg-soft-pink/50 text-rose-gold py-2 rounded-lg text-sm font-semibold hover:bg-rose-gold hover:text-white transition-all">Preview ↗</button>
+</div>
+<!-- Project 2 -->
+<div class="min-w-[300px] bg-white rounded-2xl shadow-sm p-4 snap-start border border-soft-pink/30">
+<img alt="Project 2" class="w-full h-40 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYgn5ZGuD4KVUfm7qwxphDtWVVqbmmVCrYa9hOgW5e-dZtv_8ahtCRFV8qYFSEmmuQ9RX_DFpR2hMsxNjus4HsSjxUYpbGqtAvIRKfqP2LzAI9YdXY6BTsKbd9my_DJYoOqDw6S3PrmQI2yag4JqwpsJ4f4btAd6zjvsRF35q6UM5PxEPH56pNIArB5iSrOox15mlmtrp-gqeMnYPk3sYjdFdyIRae78tfkNgKsBHssVEOLdRyqlkbIa9V6fkWTCqUNH8aut3KTEem">
+<span class="text-xs text-rose-gold font-semibold">Project 2</span>
+<h3 class="font-bold text-lg mb-4">Landing Page</h3>
+<button class="w-full bg-soft-pink/50 text-rose-gold py-2 rounded-lg text-sm font-semibold hover:bg-rose-gold hover:text-white transition-all">Preview ↗</button>
+</div>
+<!-- Project 3 -->
+<div class="min-w-[300px] bg-white rounded-2xl shadow-sm p-4 snap-start border border-soft-pink/30">
+<img alt="Project 3" class="w-full h-40 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyvt8qpuyh4w6EsqnhwcGh55TKpL0s2yY6apfmZ6ulFsop9NBGBaQ1QxnHmoJBcN3vTyutqbEHwXZTGFoOLNE6-7GfvUkclrQP7WApxpzBSXnHoxmLfwAHn4BCbE14GiCZS6BJyDP_aHugir-BCqBDMrupW-NaCPfmHyPSaFB4LwT98ktZKYCoTty-y5Bt6UQalpqEVdqNMm7nqrGOFiomXh6y203iLxj-CgXQZ7I-6CizIqrX7fITXGE2j61lDRV0SN2hWDdDwCkE">
+<span class="text-xs text-rose-gold font-semibold">Project 3</span>
+<h3 class="font-bold text-lg mb-4">CSS Flexbox</h3>
+<button class="w-full bg-soft-pink/50 text-rose-gold py-2 rounded-lg text-sm font-semibold hover:bg-rose-gold hover:text-white transition-all">Preview ↗</button>
+</div>
+<!-- Project 4 -->
+<div class="min-w-[300px] bg-white rounded-2xl shadow-sm p-4 snap-start border border-soft-pink/30">
+<img alt="Project 4" class="w-full h-40 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbLp8hKoiKE2JBiqYWgSUVVWelV-U3GSGQeXscbKGwNheccmi_9nSunrdazdLGMXYwpaEQxJo2O5OYl3sS0iaXXOzAode0dV1DNys9CGv6p8eSkRlkF5TwMy53GMHGHVXGzucnqhiAl17OPmk_EohDTSYAQW83obGn3J9c_0SrH7etSrjBxMFiYmgqmsUZ-xRXu6VsfXTUsh11Fo44IG9PeK0lVsN7ha2jtav6qOgvEI0FkSiNiYuYwrDYD5kEiNCaVTNWl3L2ZlYy">
+<span class="text-xs text-rose-gold font-semibold">Project 4</span>
+<h3 class="font-bold text-lg mb-4">Responsive Layout</h3>
+<button class="w-full bg-soft-pink/50 text-rose-gold py-2 rounded-lg text-sm font-semibold hover:bg-rose-gold hover:text-white transition-all">Preview ↗</button>
+</div>
+<!-- Project 5 -->
+<div class="min-w-[300px] bg-white rounded-2xl shadow-sm p-4 snap-start border border-soft-pink/30">
+<img alt="Project 5" class="w-full h-40 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYFIhcEgF9bC3YXhSsRrMPykbhXAbFOMaOZyD09RR56XQjSJalBLkpDaUN527iycw96O49x0aAE8QWeK_97eTDa15jbK_PSeEd_VCyzVt51scT6e9-OXjAPJOI3_LSR742-HoLtU4MIFXoNhdWzi5xSOA6wdVRJTfRK_GolRj-wrkSE7SNQzsCn81t6XnxuK3QbIULJdSdpqmtQcPZlj0-yaA429-Ptj1rsIhSbi2X-IlDndFQ8AXWFSFzb8aG8CNZAfQJY_i-fvcR">
+<span class="text-xs text-rose-gold font-semibold">Project 5</span>
+<h3 class="font-bold text-lg mb-4">Navigation Bar</h3>
+<button class="w-full bg-soft-pink/50 text-rose-gold py-2 rounded-lg text-sm font-semibold hover:bg-rose-gold hover:text-white transition-all">Preview ↗</button>
+</div>
+</div>
+<!-- Pagination Dots -->
+<div class="flex justify-center gap-2 mt-6">
+<div class="w-2 h-2 rounded-full bg-rose-gold"></div>
+<div class="w-2 h-2 rounded-full bg-soft-pink"></div>
+<div class="w-2 h-2 rounded-full bg-soft-pink"></div>
+<div class="w-2 h-2 rounded-full bg-soft-pink"></div>
+<div class="w-2 h-2 rounded-full bg-soft-pink"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ShowcaseSection -->
+<!-- BEGIN: MotivationSection -->
+<section class="py-24 bg-white relative overflow-hidden">
+<div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div data-purpose="motivation-text">
+<h2 class="font-playfair text-4xl font-bold text-dark-gray mb-6 leading-snug">Mengapa Saya Belajar<br>Web Development?</h2>
+<div class="w-20 h-1 bg-rose-gold mb-8"></div>
+<p class="text-gray-600 leading-relaxed">
+          Saya percaya bahwa teknologi adalah salah satu keterampilan penting di masa depan. Oleh karena itu saya mulai mempelajari HTML dan CSS untuk memahami bagaimana sebuah website dibuat. Saya berharap dapat terus berkembang dan mempelajari teknologi lainnya.
+        </p>
+</div>
+<div class="relative" data-purpose="quote-card">
+<div class="glass-card p-12 rounded-[3rem] shadow-xl text-center relative border-soft-pink">
+<span class="text-6xl text-soft-pink font-serif absolute top-4 left-8">“</span>
+<p class="font-playfair italic text-2xl text-dark-gray leading-relaxed mb-6">
+            The best way to predict the future is to create it.
+          </p>
+<div class="text-rose-gold text-2xl">❤</div>
+</div>
+<!-- Flower Decoration -->
+<img alt="Flower" class="absolute -bottom-8 -right-8 w-32 h-32 opacity-30 animate-float" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnux0IF2QW6mRN0J4UUQM4nC9EQdOnQiWOGyFhcMkKJb49WBrXWfL44Ss-l6U4j4SzUpGmpXDPmbl-bB-udkGhGaeEJAxkdTpykKu-C4eRB8esA4xF7ABEnYGu4ShUTPnSUbBMHqrNJAOCuQdJI1x0aSR1MAnem3oL2sLoHUaSad2ol4D95PiSMByMILe2eJVq02daLD26lXPigx9RBoCTtj7OF2NfSxuNG1RuH7Jm5WID2rU4qB4siyrZkT9srGtaH7gIUGEoc2wV">
+</div>
+</div>
+</section>
+<!-- END: MotivationSection -->
+<!-- BEGIN: ContactSection -->
+<section class="py-24 bg-soft-pink/5" id="contact">
+<div class="container mx-auto px-6 text-center">
+<h2 class="font-playfair text-4xl font-bold text-dark-gray mb-4">Hubungi Saya</h2>
+<div class="w-16 h-1 bg-rose-gold mx-auto mb-12"></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Email -->
+<a class="bg-white p-6 rounded-2xl shadow-sm border border-soft-pink/30 hover:shadow-md transition-all group" href="mailto:joceline@example.com">
+<div class="w-12 h-12 bg-soft-pink/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rose-gold/20 transition-colors">
+<span class="text-rose-gold text-xl">📧</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Email</h4>
+<p class="text-xs text-gray-500">joceline@example.com</p>
+</a>
+<!-- WhatsApp -->
+<a class="bg-white p-6 rounded-2xl shadow-sm border border-soft-pink/30 hover:shadow-md transition-all group" href="https://wa.me/6281234567890">
+<div class="w-12 h-12 bg-soft-pink/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rose-gold/20 transition-colors">
+<span class="text-rose-gold text-xl">💬</span>
+</div>
+<h4 class="font-bold text-sm mb-1">WhatsApp</h4>
+<p class="text-xs text-gray-500">+62 812-3456-7890</p>
+</a>
+<!-- Instagram -->
+<a class="bg-white p-6 rounded-2xl shadow-sm border border-soft-pink/30 hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-soft-pink/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rose-gold/20 transition-colors">
+<span class="text-rose-gold text-xl">📸</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Instagram</h4>
+<p class="text-xs text-gray-500">@joceline.gunawan</p>
+</a>
+<!-- GitHub -->
+<a class="bg-white p-6 rounded-2xl shadow-sm border border-soft-pink/30 hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-soft-pink/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rose-gold/20 transition-colors">
+<span class="text-rose-gold text-xl">🐙</span>
+</div>
+<h4 class="font-bold text-sm mb-1">GitHub</h4>
+<p class="text-xs text-gray-500">github.com/jocelinegunawan</p>
+</a>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+<!-- BEGIN: Footer -->
+<footer class="bg-dusty-rose text-white py-8 relative">
+<div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm">© 2026 Joceline Gunawan • Made with ❤️ using HTML &amp; CSS</p>
+<a class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/40 transition-all" href="#home">
+        ↑
+      </a>
+</div>
+</footer>
+<!-- END: Footer -->
+<style data-purpose="utility">
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+
+
+</body></html>
